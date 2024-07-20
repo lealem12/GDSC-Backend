@@ -1,0 +1,94 @@
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgba(0, 0, 0, 0.6);
+}
+.main-container {
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 50vw;
+    min-width: 400px;
+    max-width: 600px;
+    height: 87vh;
+}
+
+.heading {
+    color: rgba(255, 255, 255, 0.5);;
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.main-container > .form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.main-container > .form > #to-do-item {
+    padding: 0.5rem;
+    height: 2.5rem;
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    border: none;
+}
+.main-container > .form > #add-task {
+    height: 2.5rem;
+    padding: 0.5rem;
+    background: none;
+    color: rgb(227, 198, 54);
+    outline: none;
+}
+
+.main-container > .main > .label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.main-container > .main {
+    height: 70%;
+}
+.main-container > .main > #task-container {
+    height: 100%;
+    position: relative;
+    padding-left: 1rem;
+}
+.main-container > .main > #task-container > p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.main-container > .main > #task-container > .list {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: .5rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container > .main > #task-container > .list > button {
+    color: rgba(255, 0, 0, 0.8);
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.main-container > .main > #task-container > .list > button:hover {
+    color: rgba(255, 0, 0, 0.5)   
+}
