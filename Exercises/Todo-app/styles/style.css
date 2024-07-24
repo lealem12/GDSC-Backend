@@ -1,0 +1,101 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: monospace, Courier;
+}
+
+.body-container {
+    width: 450px;
+    max-height: 85vh;
+    overflow: auto;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+.body-container .heading {
+    font-size: 1.25rem;
+    font-family:'Trebuchet MS';
+    margin-bottom: 1rem;
+}
+
+.main > form {
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main > form > #title {
+    width: 275px;
+    margin-right: 1rem;
+    background: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 3px;
+    outline: none;
+    transition: border-color 0.5s ease;
+}
+.main > form > #title:focus {
+    border-color: rgba(0, 0, 0, .75);
+}
+.main > form > #submit-btn {
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: rgb(36, 160, 237);
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+}
+.main > form > #submit-btn:hover {
+    background-color: rgba(36, 160, 237, 0.8);
+}
+.main > form > #submit-btn:active {
+    transform: scale(0.95);
+}
+
+.main > .lists-container > .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.main > .lists-container > .list > div {
+    display: flex;
+}
+.main > .lists-container > .list > div > .checkbox {
+    margin-right: .5rem;
+}
+
+.main > .lists-container > .list > .delete-btn {
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: 900;
+    padding: 0.3rem 0.8rem;
+    border-radius: 3px;
+    color: #bebebe;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    accent-color: #3b8132;
+    cursor: pointer;
+}
+
+/* dom manipulation */
+.display-delete-btn {
+    color: #000 !important;
+    transition: transform 0.125s ease;
+}
+.main > .lists-container > .list > .display-delete-btn:hover {
+    transform: scale(1.25);
+}
+.done-task-title {
+    text-decoration: line-through;
+}
