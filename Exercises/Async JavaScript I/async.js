@@ -17,16 +17,19 @@ function callbackHell () {
     function callback4 () {
         console.log("This is callback 4")
     }
-    function callback3 () {
+    function callback3 (callback4) {
         callback4();
     }
     function callback2 (callback3) {
         callback3(callback4);
     }
-    function callback (callback2) {
+    function callback1 (callback2) {
         callback2(callback3);
     }
-    callback(callback2);
+    function callback (callback1) {
+        callback1(callback2);
+    }
+    callback(callback1);
 }
 
 callbackHell();
