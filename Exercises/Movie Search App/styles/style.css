@@ -1,0 +1,109 @@
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: monospace;
+}
+.header {
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+.input-container {
+    margin: 0 auto;
+    display: flex;
+}
+
+.header > .input-container > .search-input {
+    width: 350px;
+    margin-right: 1rem;
+    background: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 3px;
+    outline: none;
+    transition: border-color 0.5s ease;
+}
+.header > .input-container > .search-input:focus {
+    border-color: rgba(0, 0, 0, .75);
+}
+.header > .input-container > .search-btn{
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: rgb(36, 160, 237);
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+}
+.header > .input-container > .search-btn:hover {
+    background-color: rgba(36, 160, 237, 0.8);
+}
+.header > .input-container > .search-btn:active {
+    transform: scale(0.95);
+}
+
+.main {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;    
+}
+
+.main > .movies-list > .movie {
+    width: min-content;
+    margin: 1rem 0.5rem;
+}
+.main > .movies-list > .movie > .poster {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+.main > .movies-list > .movie > .poster:hover {
+    opacity: 0.75;
+}
+.main > .movies-list > .movie > .poster:active {
+    transform: scale(0.98);
+}
+.main > .movies-list > .movie > .title {
+    padding: 0.5rem 1rem;
+}
+.main > .movies-list > .movie > .description {
+    display: none;
+}
+.main > .movies-list > .movie > .show-description {
+    display: block;
+}
+.loader-wheel {
+    animation: spin 1s infinite linear;
+    border: 2px solid rgba(225, 225, 225, 0.9);
+    border-left: 4px solid #134154;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
