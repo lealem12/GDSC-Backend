@@ -13,22 +13,17 @@ searchBtn.addEventListener('click', async () => {
     moviesContainer.innerHTML = "";
     moviesList.forEach(movie => {
         moviesContainer.innerHTML += movieElement(movie);
-        console.log(movie)
     });
 })
 
-if (moviesContainer.innerHTML !== "") {
-    moviesContainer.addEventListener('click', (event)=> {
-        const clickedArea = event.target;
-        if (clickedArea.tagName === "IMG") {
-            const clickedMovie = clickedArea.parentNode;
-            if (clickedMovie.children[2].classList.contains("show-description")) {
-                clickedMovie.children[2].classList.remove("show-description");
-            } else {
-                clickedMovie.children[2].classList.add("show-description");
-            }
+moviesContainer.addEventListener('click', (event)=> {
+    if (event.target.tagName === "IMG") {
+        const clickedMovie = event.target.parentNode;
+        if (clickedMovie.children[2].classList.contains("show-description")) {
+            clickedMovie.children[2].classList.remove("show-description");
+        } else {
+            clickedMovie.children[2].classList.add("show-description");
         }
-    })
-}
-
+    }
+})
 

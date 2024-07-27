@@ -55,7 +55,7 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 }
 
 .main > .movies-list > .movie {
