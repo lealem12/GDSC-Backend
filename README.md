@@ -1,4 +1,7 @@
-## GDSC Backend class Exercies (the ones with HTML pages)
+## Github pages for GDSC Backend class
 
-### Todo app:
+### Exercises
+  #### Todo app:
     https://lealem12.github.io/GDSC-Backend/Exercises/Todo-app/todoApp.html
+  #### Movie Search App
+    https://lealem12.github.io/GDSC-Backend/Exercises/Movie Search App/index.html
